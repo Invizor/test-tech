@@ -1,10 +1,12 @@
 <app-modal-edit-user
+  *ngIf="isOpenModalEditUser"
   [isOpen]="isOpenModalEditUser"
   [user]="editableUser"
   (close)="onCloseModalEditUser($event)"
 >
 </app-modal-edit-user>
 <app-modal-user-albums
+  *ngIf="isOpenModalUserAlbums"
   [isOpen]="isOpenModalUserAlbums"
   [user]="editableUser"
   (close)="onCloseModalUserAlbums($event)"
