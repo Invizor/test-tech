@@ -75,5 +75,7 @@ export class ModalUserAlbumsComponent implements OnInit, OnChanges, OnDestroy {
 
   ngOnDestroy() {
     this.filterTitleAlbums = '';
+    this.listAlbums = [];
+    this.viewListAlbums = [];
   }
 }
