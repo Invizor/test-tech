@@ -1,0 +1,34 @@
+<div class="c-modal-edit-user" [hidden]="!isOpen">
+  <div class="wrapper" (click)="closeModal()">
+  </div>
+  <div class="content-window">
+    <div class="header-window">
+      Edit user
+      <i class="fas fa-times" (click)="closeModal()"></i>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="saveUserChanges()">
+      <div class="field-input">
+        <label>
+          Name
+        </label>
+        <input formControlName="name">
+      </div>
+      <div class="field-input">
+        <label>
+          Email
+        </label>
+        <input formControlName="email">
+      </div>
+      <div class="field-input">
+        <label>
+          Phone
+        </label>
+        <input formControlName="phone">
+      </div>
+
+      <div class="field-input">
+        <button type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>

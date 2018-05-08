@@ -1,0 +1,145 @@
+@media(min-width: 1200px) {
+  .c-page-list-user {
+    padding-left: 300px;
+    padding-right: 300px;
+    width: 100%;
+  }
+}
+
+@media(max-width: 1199px) and (min-width: 850px) {
+  .c-page-list-user {
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 100%;
+  }
+}
+
+@media(max-width: 849px){
+  .c-page-list-user {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+}
+
+.c-page-list-user .content-filter {
+  padding-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.c-page-list-user .content-filter .container-input {
+  width: 200px;
+  height: 40px;
+  position: relative;
+}
+
+.c-page-list-user .content-filter .container-input .filter-name {
+  width: 200px;
+  height: 40px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.10);
+  box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.20);
+  border-radius: 5px;
+  font-size: 14px;
+  color: #000000;
+  outline: none;
+  padding-left: 35px;
+}
+
+.c-page-list-user .content-filter .container-input i {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 22px;
+}
+
+.c-page-list-user .content-table {
+  width: 100%;
+  padding-top: 20px;
+  overflow-x: auto;
+}
+
+.c-page-list-user .content-table .table-list-users {
+  width: 100%;
+  min-width: 600px;
+  background: #333333;
+  border: 1px solid #484848;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.c-page-list-user .content-table .table-list-users tr {
+  height: 60px;
+}
+
+.c-page-list-user .content-table .table-list-users tr:nth-child(2n) {
+  background: #393939;
+}
+
+.c-page-list-user .content-table .table-list-users tr th {
+  border: 1px solid #484848;
+}
+
+.c-page-list-user .content-table .table-list-users tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.c-page-list-user .content-table .table-list-users tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.c-page-list-user .content-table .table-list-users tr:last-child th:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.c-page-list-user .content-table .table-list-users tr:last-child th:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.c-page-list-user .content-table .table-list-users tr .column-id {
+  width: 15%;
+}
+
+.c-page-list-user .content-table .table-list-users tr .column-name {
+  width: 30%;
+}
+
+.c-page-list-user .content-table .table-list-users tr .element-name {
+  cursor: pointer;
+}
+
+.c-page-list-user .content-table .table-list-users tr .element-name:hover {
+  text-decoration: underline;
+}
+
+.c-page-list-user .content-table .table-list-users tr .column-email {
+  width: 30%;
+}
+
+.c-page-list-user .content-table .table-list-users tr .column-edit {
+  width: 25%;
+}
+
+.c-page-list-user .content-table .table-list-users tr .element-edit {
+  cursor: pointer;
+}
+
+.c-page-list-user .content-table .table-list-users tr .element-edit:hover {
+  text-decoration: underline;
+}
+
+.c-page-list-user .content-table .table-list-users tr td {
+  text-align: center;
+  border: 1px solid #484848;
+}
+
+.c-page-list-user .content-table .table-list-users tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.c-page-list-user .content-table .table-list-users tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}

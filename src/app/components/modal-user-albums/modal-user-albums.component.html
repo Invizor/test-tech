@@ -1,0 +1,32 @@
+<div class="c-modal-user-albums" [hidden]="!isOpen">
+  <div class="wrapper" (click)="closeModal()">
+  </div>
+  <div class="content-window">
+    <div class="header-window">
+      User albums
+      <i class="fas fa-times" (click)="closeModal()"></i>
+    </div>
+    <div class="content-filter">
+      <div class="container-input">
+        <input class="filter-name" type="text" [ngModel]="filterTitleAlbums" (ngModelChange)="changedFilterAlbums($event)">
+        <i class="fas fa-search"></i>
+      </div>
+    </div>
+    <div class="content-table">
+      <table class="table-albums-user" cellspacing="0px">
+        <tr>
+          <th class="column-id">ID</th>
+          <th class="column-title">Name</th>
+        </tr>
+        <tr *ngFor="let album of viewListAlbums">
+          <td class="element-id">
+            {{album.id}}
+          </td>
+          <td class="element-title">
+            {{album.title}}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
