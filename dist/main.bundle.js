@@ -345,6 +345,8 @@ var ModalUserAlbumsComponent = /** @class */ (function () {
     };
     ModalUserAlbumsComponent.prototype.ngOnDestroy = function () {
         this.filterTitleAlbums = '';
+        this.listAlbums = [];
+        this.viewListAlbums = [];
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
@@ -448,7 +450,7 @@ module.exports = "@media(min-width: 1200px) {\n  .c-page-list-user {\n    paddin
 /***/ "./src/app/page/list-user/list-user.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-modal-edit-user\n  [isOpen]=\"isOpenModalEditUser\"\n  [user]=\"editableUser\"\n  (close)=\"onCloseModalEditUser($event)\"\n>\n</app-modal-edit-user>\n<app-modal-user-albums\n  [isOpen]=\"isOpenModalUserAlbums\"\n  [user]=\"editableUser\"\n  (close)=\"onCloseModalUserAlbums($event)\"\n>\n</app-modal-user-albums>\n<div class=\"c-page-list-user\">\n  <div class=\"content-filter\">\n    <div class=\"container-input\">\n      <input class=\"filter-name\" type=\"text\" [ngModel]=\"filterNameUser\" (ngModelChange)=\"changedFilterUser($event)\">\n      <i class=\"fas fa-search\"></i>\n    </div>\n  </div>\n  <div class=\"content-table\">\n    <table class=\"table-list-users\" cellspacing=\"0px\">\n      <tr>\n        <th class=\"column-id\">ID</th>\n        <th class=\"column-name\">Name</th>\n        <th class=\"column-email\">Email</th>\n        <th class=\"column-edit\">Edit</th>\n      </tr>\n      <tr *ngFor=\"let user of viewListUsers\">\n        <td class=\"element-id\">\n          {{user.id}}\n        </td>\n        <td class=\"element-name\" (click)=\"openModalUserAlbums(user)\">\n          {{user.name}}\n        </td>\n        <td class=\"element-email\">\n          {{user.email}}\n        </td>\n        <td class=\"element-edit\" (click)=\"startEditCurrentUser(user)\">\n          Edit\n        </td>\n      </tr>\n    </table>\n  </div>\n</div>"
+module.exports = "<app-modal-edit-user\n  *ngIf=\"isOpenModalEditUser\"\n  [isOpen]=\"isOpenModalEditUser\"\n  [user]=\"editableUser\"\n  (close)=\"onCloseModalEditUser($event)\"\n>\n</app-modal-edit-user>\n<app-modal-user-albums\n  *ngIf=\"isOpenModalUserAlbums\"\n  [isOpen]=\"isOpenModalUserAlbums\"\n  [user]=\"editableUser\"\n  (close)=\"onCloseModalUserAlbums($event)\"\n>\n</app-modal-user-albums>\n<div class=\"c-page-list-user\">\n  <div class=\"content-filter\">\n    <div class=\"container-input\">\n      <input class=\"filter-name\" type=\"text\" [ngModel]=\"filterNameUser\" (ngModelChange)=\"changedFilterUser($event)\">\n      <i class=\"fas fa-search\"></i>\n    </div>\n  </div>\n  <div class=\"content-table\">\n    <table class=\"table-list-users\" cellspacing=\"0px\">\n      <tr>\n        <th class=\"column-id\">ID</th>\n        <th class=\"column-name\">Name</th>\n        <th class=\"column-email\">Email</th>\n        <th class=\"column-edit\">Edit</th>\n      </tr>\n      <tr *ngFor=\"let user of viewListUsers\">\n        <td class=\"element-id\">\n          {{user.id}}\n        </td>\n        <td class=\"element-name\" (click)=\"openModalUserAlbums(user)\">\n          {{user.name}}\n        </td>\n        <td class=\"element-email\">\n          {{user.email}}\n        </td>\n        <td class=\"element-edit\" (click)=\"startEditCurrentUser(user)\">\n          Edit\n        </td>\n      </tr>\n    </table>\n  </div>\n</div>"
 
 /***/ }),
 
